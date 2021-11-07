@@ -56,7 +56,7 @@ fn main() {
         println!("Failed! Possible reason: Incorrect data type passed or connection failure");
     }
 
-    // Get one item with 'id'
+    // Get one item with 'item_id'
     let mut result: Vec<models::Menu> = Vec::new();
     println!("Single item get test");
     result = models::Menu::get_item(2, &conn);
@@ -74,19 +74,19 @@ fn main() {
         println!("Successfully deleted");
     }
     else {
-        println!("Failed! possible reasons: id doesnt exist");
+        println!("Failed! possible reasons: item_id doesnt exist");
     }
 
     // Update an item
     let mut target_item = models::Menu {
-        id: 1,
+        item_id: 1,
         item: String::from("Ramen"),
         calories: 800
     };
-    if models::Menu::update_item_by_id(1, target_item, &conn) {
+    if models::Menu::update_item(1, target_item, &conn) {
         println!("Successfully Updated");
     }
     else {
-        println!("Failed! possible reasons: id doesnt exist");
+        println!("Failed! possible reasons: item_id doesnt exist");
     }
 }

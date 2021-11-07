@@ -1,6 +1,6 @@
 table! {
-    menu (id) {
-        id -> Int4,
+    menu (item_id) {
+        item_id -> Int4,
         item -> Varchar,
         calories -> Int4,
     }
@@ -17,22 +17,22 @@ table! {
 }
 
 table! {
-    orders (id) {
-        id -> Int4,
+    orders (order_id) {
+        order_id -> Int4,
         table_id -> Int4,
     }
 }
 
 table! {
-    status (id) {
-        id -> Int4,
+    status (status_id) {
+        status_id -> Int4,
         description -> Varchar,
     }
 }
 
 table! {
-    tables (id) {
-        id -> Int4,
+    tables (table_id) {
+        table_id -> Int4,
         table_name -> Varchar,
     }
 }
