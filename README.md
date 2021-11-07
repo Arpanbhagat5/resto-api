@@ -5,7 +5,7 @@ https://github.com/diesel-rs/diesel/tree/master/diesel_cli
 cargo install diesel_cli --no-default-features --features "postgres sqlite mysql"
 
 ## setup DB env var
-echo DATABASE_URL=:postgres//<USERNAME>:<PASSWORD>@localhost/<DB_NAME> > .env
+echo DATABASE_URL=postgres//<USERNAME>:<PASSWORD>@localhost/<DB_NAME> > .env
 echo DATABASE_URL=postgres://apiuser:password@localhost/resto-api-db > .env
 
 ## create migrations and setup DB
