@@ -14,7 +14,6 @@ pub struct Menu {
   pub calories : i32,
 }
 
-
 // Will be used to create a new instance of item for insert/update op
 #[derive(Queryable, Insertable, Debug)]
 #[table_name = "menu"]
@@ -64,5 +63,4 @@ impl Menu {
         .execute(conn)
         .is_ok()
   }
-
 }
