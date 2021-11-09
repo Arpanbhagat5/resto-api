@@ -9,7 +9,7 @@ table! {
 table! {
     order_items (id) {
         id -> Int4,
-        prep_time -> Nullable<Int4>,
+        prep_time -> Int4,
         order_id -> Int4,
         item_id -> Int4,
         status_id -> Int4,
@@ -34,6 +34,7 @@ table! {
     tables (table_id) {
         table_id -> Int4,
         table_name -> Varchar,
+        is_occupied -> Bool,
     }
 }
 

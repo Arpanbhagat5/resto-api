@@ -12,7 +12,8 @@ pub fn init_tables(conn: &PgConnection) {
     table_name.push_str(&table_num_suffix);
 
     let new_table = tables::NewTable {
-      table_name: table_name
+      table_name: table_name,
+      is_occupied: false
     };
 
     if tables::Tables::add_table(new_table, &conn) {
@@ -25,7 +26,7 @@ pub fn init_tables(conn: &PgConnection) {
 }
 
 pub fn init_status(conn: &PgConnection) {
-  let status_list: Vec<&str> = vec!["ordered", "under_prep", "served", "cancelled"];
+  let status_list: Vec<&str> = vec!["ordered", "preparing", "served", "cancelled"];
   for status in status_list.iter() {
     let new_status = status::NewStatus {
       description: status.to_string()
