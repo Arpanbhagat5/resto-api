@@ -1,13 +1,16 @@
 [package]
-name = "resto-api"
+name = "resto_api"
 version = "0.1.0"
 edition = "2018"
 authors = ["arpan-bhagat <arpanbhagat5@gmail.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
+[lib]
+name = "resto_api"
+path = "src/lib.rs"
 
+[dependencies]
 # ORM library for DB ops
 diesel = { version = "1.4.8", features = ["postgres"] }
 # diesel_codegen = { version = "0.16.1", features = ["postgres"] }

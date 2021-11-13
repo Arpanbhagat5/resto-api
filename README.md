@@ -1,4 +1,4 @@
-## resto-api
+## resto_api
 
 ## setup diesel cli
 https://github.com/diesel-rs/diesel/tree/master/diesel_cli

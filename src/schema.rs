@@ -34,7 +34,7 @@ table! {
     tables (table_id) {
         table_id -> Int4,
         table_name -> Varchar,
-        is_occupied -> Bool,
+        is_table_occupied -> Bool,
     }
 }
 

@@ -13,7 +13,7 @@ pub fn init_tables(conn: &PgConnection) {
 
     let new_table = tables::NewTable {
       table_name: table_name,
-      is_occupied: false
+      is_table_occupied: false
     };
 
     if tables::Tables::add_table(new_table, &conn) {
@@ -44,7 +44,7 @@ pub fn init_status(conn: &PgConnection) {
 pub fn init_menu(conn: &PgConnection) {
   let item_list: Vec<(&str, i32)> = vec![("Pizza", 900), ("Pasta", 800), ("Spaghetti", 900), ("Samosa", 300), ("Juice", 250), ("Ice-cream", 600)];
   for tuple in item_list.iter() {
-    let new_item = menu::NewItem {
+    let new_item = menu::NewMenuItem {
       item: tuple.0.to_string(),
       calories: tuple.1
     };

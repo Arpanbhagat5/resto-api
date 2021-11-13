@@ -1,7 +1,7 @@
 # update with struct without id
 ```
 use schema::menu::dsl::{item as i, prep_time as pt}; //can use this short notation
-let NewItem {
+let NewMenuItem {
     item,
     prep_time
 } = target_item;
